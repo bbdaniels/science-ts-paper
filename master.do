@@ -4,6 +4,17 @@
 
 	global directory "/Users/bbdaniels/GitHub/science-ts-paper/"
 
+// Load .adofiles
+
+	local adoFiles : dir `"${directory}/adofiles/"' files "*.ado"
+	local adoFiles = subinstr(`" `adoFiles' "', `"""' , "" , .)
+	foreach adoFile in `adoFiles' {
+		qui do "${directory}/ado/`adoFile'"
+		}
+
+	net from http://fmwww.bc.edu/RePEc/bocode/t
+		net install tabout
+
 // Globals
 
 	global graph_opts ///
