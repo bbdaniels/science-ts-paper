@@ -1,0 +1,66 @@
+
+
+
+
+
+Notes:
+
+need NPV equation:
+
+conditions: tariff rate cut could incentivize builds (otherwise falling costs lead to infinite wait) but credit/access constraints means that time shocks boost the rich more
+
+
+COSTS
+
+http://www.nrel.gov/news/press/2016/37745
+
+
+RETURNS
+
+http://greenbusinesswatch.co.uk/uk-domestic-solar-panel-costs-and-returns-2010-2014#section4
+
+
+use installations only under the main tariff
+
+
+https://www.gov.uk/government/news/feed-in-tariff-appeal-application-to-the-supreme-court
+
+“We want to see the available funding spread as far and wide as possible making FITs a scheme for the many not a scheme for the few, supporting sustainable jobs in solar and in a whole range of small scale renewables.”
+
+Schedule – http://contemporaryenergy.co.uk/history-of-the-uk-feed-in-tariff/
+
+Initial - 43.3p/kWh
+https://www.ofgem.gov.uk/publications-and-updates/feed-tariff-table-1-august-2011
+
+Oct 31 2011 – Rate cuts announced - 21p/kWh 
+https://www.solarpowerportal.co.uk/news/fit_cuts_2011_decc_proposes_21p_rate_december_deadline_5478
+
+The Minister also outlined that while changes would not go through in December  –  as was recently feared  –  the new proposed tariffs would apply to all new solar PV installations with an eligibility date on or after 12 December 2011. These installations would receive the current tariff rates before moving to the lower tariffs on 1 April 2012.
+
+https://www.gov.uk/government/news/gregory-barker-mp-written-ministerial-statement-on-feed-in-tariffs-scheme
+
+2011 Dec 21 - december 21p sent to trial
+
+https://www.theguardian.com/environment/2011/dec/21/solar-subsidy-cuts-legally-flawed
+
+2012 Jan 25 - 21p rate reported delayed to 3 march
+
+https://www.theguardian.com/environment/2012/jan/25/solar-subsidies-government-loses-court-appeal
+
+2012 Feb 09 - Reduction to 21p from 3rd mar confirmed
+
+https://www.gov.uk/government/news/improvements-to-the-feed-in-tariffs-scheme
+
+2012 May 24 Reduction announced 21p —> 16p for 1 Aug
+https://www.gov.uk/government/news/certainty-for-solar--2
+
+https://www.theguardian.com/environment/2012/may/24/solar-power-subsidy-cut
+
+http://www.bbc.com/news/business-18192302
+
+The feed-in tariff will fall to 16 pence per KW hour from 21p on 1 August, not on 1 July as previously announced [in February]. It will then fall every three months, depending on market conditions.
+
+
+
+Full
+
