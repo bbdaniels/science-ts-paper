@@ -2,14 +2,15 @@
 
 //	Set up directory
 
-	global directory "/Users/bbdaniels/GitHub/science-ts-paper/"
+	global directory "/Users/bbdaniels/GitHub/science-ts-paper"
+	global datadir "/Users/bbdaniels/GitHub/science-ts-paper/"
 
 // Load .adofiles
 
 	local adoFiles : dir `"${directory}/adofiles/"' files "*.ado"
 	local adoFiles = subinstr(`" `adoFiles' "', `"""' , "" , .)
 	foreach adoFile in `adoFiles' {
-		qui do "${directory}/ado/`adoFile'"
+		qui do "${directory}/adofiles/`adoFile'"
 		}
 
 	net from http://fmwww.bc.edu/RePEc/bocode/t
