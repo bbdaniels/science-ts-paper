@@ -101,7 +101,7 @@
 
   local model shock total2 1.shock#c.(social_ab own_own hh_flat work_unemp urban density_hh)
 
-  forvalues time = 1/3 {
+  foreach time in 1 3 5 {
     foreach var in capacity income {
       reghdfe `var' `model' if time == `time' ///
         , cl(llsoa date) a(llsoa_code) nosample
