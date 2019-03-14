@@ -2,21 +2,23 @@
 * These must be run in a specific order but each saves progress after a major operation.
 * This enables edits to be made at later stages without re-running all processes.
 
-global datadir "/Users/bbdaniels/Dropbox/Projects/GRI/household_microgeneration_project/Time Series Paper/"
+ieboilstart, v(13)
+`r(version)'
+
+global datadir "/Users/bbdaniels/GitHub/science-ts-paper"
 
 	global graph_opts bgcolor(white) title("") note(, justification(left) color(black) span pos(7)) title(, justification(left) color(black) span pos(11)) subtitle(, justification(left) color(black) span pos(11)) graphregion(color(white)) ylab(,angle(0) nogrid) ytit("") xtit(,placement(left) justification(left)) yscale(noline) xscale(noline) legend(region(lc(none) fc(none)))
 	global graph_opts1 bgcolor(white) graphregion(color(white)) legend(region(lc(none) fc(none))) ylab(,angle(0) nogrid) title(, justification(left) color(black) span pos(11)) subtitle(, justification(left) color(black))
-	global comb_opts graphregion(color(white)) 
+	global comb_opts graphregion(color(white))
 	global hist_opts ylab(, angle(0) axis(2)) yscale(off alt axis(2)) ytit(, axis(2)) ytit(, axis(1))  yscale(alt)
 	global pct `" 0 "0%" .25 "25%" .5 "50%" .75 "75%" 1 "100%" "'
 	global numbering `""(1)" "(2)" "(3)" "(4)" "(5)" "(6)" "(7)" "(8)" "(9)" "(10)""'
-	
-qui do "${datadir}/Adofiles/TabstatOut/tabstatout.ado"
-qui do "${datadir}/Adofiles/SummaryStatistics/sumstats.ado"
-qui do "${datadir}/Adofiles/LabelCollapse/labelcollapse.ado"
-qui do "${datadir}/Adofiles/Timeline/timeline.ado"
-qui do "${datadir}/Adofiles/xilabels/xiplus.ado"
-	
+
+qui do "${datadir}/Adofiles/tabstatout.ado"
+// qui do "${datadir}/Adofiles/sumstats.ado"
+qui do "${datadir}/Adofiles/labelcollapse.ado"
+qui do "${datadir}/Adofiles/xiplus.ado"
+
 	-
 
 * Files:
