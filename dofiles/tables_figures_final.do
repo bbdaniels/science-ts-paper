@@ -44,7 +44,7 @@ qui {
   		(line tariff date , lc(dkgreen) fc(dkgreen) lw(thick) yaxis(2) ) ///
   		, $graph_opts xsize(8) ///
   		legend(on ring(0) c(1) pos(11) symxsize(small) symysize(small) ///
-  			order(2 "Headline Tariff (GBP/kWh)" 3 "Daily Installations" 1 "Policy Shock Periods" )) ///
+  			order(2 "Headline Tariff (GBP/kWh)" 3 "Daily Installations" 1 "Counterfactual Shock Periods" )) ///
   		xtit(" ") ytit(" ") ylab(, angle(0) axis(2)) yscale( alt axis(2)) ///
   		ytit(, axis(2)) ytit(, axis(1))  yscale(alt) yscale( noline axis(2)) ylab(0 "0.00" .2 "0.20" .4 "0.40" .6 "0.60" .8 "0.80" 1 `""GBP" "1.00""' , axis(2))
 
@@ -78,16 +78,22 @@ qui {
 				(urban density_hh households social_ab own_own hh_flat work_unemp) ///
 				using "${datadir}/outputs/1b_summary.xlsx" , replace stats(mean sd min p25 p50 p75 max N)
 
-// Table 2: Tariff Rates
+// Table 2. Installation-level summary by period
 
-	insheet using "${datadir}/Data/Raw/tarifftable2015.csv" ,  clear
+	use "$datadir/Constructed/installs_lsoas.dta",clear
 
-	keep if regexm(tariffcode,"PV") & regexm(tariffcode,"0-4")
-	keep if fityr == 6
-	sort description
-	drop fityr
+	keep if installed_capacity != .
 
-	export excel using "${datadir}/outputs/2_tariffs.xlsx" , replace first(varl)
+		sumstats ///
+		( installed_capacity income tariffpkwh if period == 1) ///
+		( installed_capacity income tariffpkwh if period == 2) ///
+		( installed_capacity income tariffpkwh if period == 3) ///
+		( installed_capacity income tariffpkwh if period == 4) ///
+		( installed_capacity income tariffpkwh if period == 5) ///
+		( installed_capacity income tariffpkwh if period == 6) ///
+		( installed_capacity income tariffpkwh if period > 6) ///
+		( installed_capacity income tariffpkwh if period < 7) ///
+		using "${datadir}/outputs/2_periods.xlsx" , replace stats(mean sd N)
 
 // Table 3. Model calibration
 

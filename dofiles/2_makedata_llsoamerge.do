@@ -409,8 +409,13 @@ saveold "$datadir/Data/Public/installs_lsoas_lat.dta",replace
   		// bys llsoa: gen total = sum(installed_capacity) - installed_capacity
   		bys llsoa: gen total2 = households - sum(n_installs) + n_installs
 
-saveold "$datadir/Data/Public/ts_lsoas_date.dta",replace
-	use "$datadir/Data/Public/ts_lsoas.dta",clear
+      bys period: egen meddate = median(date)
+  			replace shock = 1 if date > meddate & period > 6
+        drop meddate
+
+saveold "$datadir/Constructed/ts_lsoas_date.dta",replace
+use "$datadir/Data/Public/ts_lsoas_date.dta",clear
+	// use "$datadir/Data/Public/ts_lsoas.dta",clear
 
 
 * Time Series – counterfactual
