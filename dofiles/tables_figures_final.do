@@ -1,5 +1,5 @@
 // Tables and figures
-
+qui {
 // Figure 1. Timeline
 
   // Shocks
@@ -62,7 +62,7 @@
 			sumstats ///
 				(tariffpkwh installed_capacity income) ///
 				(urban density_hh households social_ab own_own hh_flat work_unemp) ///
-				using "${datadir}/outputs/1a_summary.xls" , replace stats(mean sd min p25 p50 p75 max N)
+				using "${datadir}/outputs/1a_summary.xlsx" , replace stats(mean sd min p25 p50 p75 max N)
 
 	// Panel B: LLSOA Level
 
@@ -76,7 +76,7 @@
 				sumstats ///
 				(installed_capacity income) ///
 				(urban density_hh households social_ab own_own hh_flat work_unemp) ///
-				using "${datadir}/outputs/1b_summary.xls" , replace stats(mean sd min p25 p50 p75 max N)
+				using "${datadir}/outputs/1b_summary.xlsx" , replace stats(mean sd min p25 p50 p75 max N)
 
 // Table 2: Tariff Rates
 
@@ -168,6 +168,6 @@
 
       outwrite `regs' using "${datadir}/outputs/4c_counterfactual.xlsx" , replace stats(N r2) drop(i.time total2)
 
-
-
+// End
+}
 // Have a lovely day!
